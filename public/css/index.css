@@ -157,6 +157,21 @@
   .visible {
     visibility: visible;
   }
+  .flex {
+    display: flex;
+  }
+  .table {
+    display: table;
+  }
+  .h-4 {
+    height: calc(var(--spacing, 0.25rem) * 4);
+  }
+  .h-10 {
+    height: calc(var(--spacing, 0.25rem) * 10);
+  }
+  .h-\[10px\] {
+    height: 10px;
+  }
   .h-\[20px\] {
     height: 20px;
   }
@@ -165,6 +180,12 @@
   }
   .h-full {
     height: 100%;
+  }
+  .w-4 {
+    width: calc(var(--spacing, 0.25rem) * 4);
+  }
+  .w-10 {
+    width: calc(var(--spacing, 0.25rem) * 10);
   }
   .w-\[20px\] {
     width: 20px;
@@ -175,11 +196,31 @@
   .w-full {
     width: 100%;
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
 }
 .contenidor_ext {
   margin-inline: auto;
   display: flex;
-  height: 500px;
+  height: 400px;
   width: 100%;
   flex-direction: column;
   border-radius: 20px;
@@ -187,7 +228,7 @@
 }
 .btn-crear {
   display: flex;
-  height: 70px;
+  height: 60px;
   width: 188px;
   align-items: center;
   justify-content: space-between;
@@ -232,6 +273,7 @@ main {
 input {
   height: 33px;
   width: 243px;
+  align-self: center;
   border-radius: 10px;
   background-color: var(--color-parchment, #F4F0EB);
   color: var(--color-deep-mocha, #4A3B32);
@@ -245,6 +287,8 @@ input {
 #scroll {
   flex: 1;
   overflow-y: scroll;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   background-color: var(--color-bone, #E3DAC9);
   padding-inline: calc(var(--spacing, 0.25rem) * 8);
   padding-block: calc(var(--spacing, 0.25rem) * 10);
@@ -262,7 +306,7 @@ input {
   background-color: var(--color-white, #fff);
 }
 .tarjeta-icona {
-  height: 144px;
+  height: 100px;
   padding: calc(var(--spacing, 0.25rem) * 4);
 }
 .tarjeta-icona svg {
@@ -273,13 +317,24 @@ input {
   background-color: #F4F0EB;
   padding-block: calc(var(--spacing, 0.25rem) * 4);
   text-align: center;
-  font-size: 1.25rem;
+  font-size: var(--text-base, 1rem);
+  line-height: var(--tw-leading, var(--text-base--line-height, calc(1.5 / 1)));
 }
 .ordenarGrid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   column-gap: calc(var(--spacing, 0.25rem) * 16);
   row-gap: calc(var(--spacing, 0.25rem) * 8);
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
 }
 @property --tw-leading {
   syntax: "*";
@@ -288,6 +343,8 @@ input {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+      --tw-outline-style: solid;
       --tw-leading: initial;
     }
   }

@@ -1,6 +1,5 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -9,7 +8,12 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
     --spacing: 0.25rem;
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-parchment: #F4F0EB;
@@ -170,47 +174,17 @@
   .visible {
     visibility: visible;
   }
-  .relative {
-    position: relative;
-  }
-  .flex {
-    display: flex;
-  }
-  .table {
-    display: table;
+  .h-\[10px\] {
+    height: 10px;
   }
   .h-\[20px\] {
     height: 20px;
   }
-  .h-\[30\.46px\] {
-    height: 30.46px;
-  }
-  .h-\[40\.2px\] {
-    height: 40.2px;
-  }
-  .h-\[40\.46px\] {
-    height: 40.46px;
-  }
-  .h-\[47\.02px\] {
-    height: 47.02px;
-  }
-  .h-\[50\.2px\] {
-    height: 50.2px;
-  }
   .h-\[69px\] {
     height: 69px;
   }
-  .h-\[715px\] {
-    height: 715px;
-  }
-  .h-\[721px\] {
-    height: 721px;
-  }
-  .h-auto {
-    height: auto;
-  }
-  .h-px {
-    height: 1px;
+  .h-full {
+    height: 100%;
   }
   .w-\[20px\] {
     width: 20px;
@@ -218,97 +192,8 @@
   .w-\[69px\] {
     width: 69px;
   }
-  .w-\[143px\] {
-    width: 143px;
-  }
-  .w-\[262px\] {
-    width: 262px;
-  }
-  .w-\[407\.1px\] {
-    width: 407.1px;
-  }
-  .w-\[455\.92px\] {
-    width: 455.92px;
-  }
-  .w-\[639px\] {
-    width: 639px;
-  }
-  .w-\[715px\] {
-    width: 715px;
-  }
   .w-full {
     width: 100%;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
-  }
-  .flex-col {
-    flex-direction: column;
-  }
-  .flex-wrap {
-    flex-wrap: wrap;
-  }
-  .items-center {
-    align-items: center;
-  }
-  .justify-around {
-    justify-content: space-around;
-  }
-  .justify-center {
-    justify-content: center;
-  }
-  .gap-0 {
-    gap: 0px;
-  }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
-  .overflow-hidden {
-    overflow: hidden;
-  }
-  .rounded-\[10px\] {
-    border-radius: 10px;
-  }
-  .rounded-\[20px\] {
-    border-radius: 20px;
-  }
-  .rounded-\[30px\] {
-    border-radius: 30px;
-  }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
-  .bg-deep-mocha {
-    background-color: var(--color-deep-mocha);
-  }
-  .bg-parchment {
-    background-color: var(--color-parchment);
-  }
-  .object-cover {
-    object-fit: cover;
-  }
-  .text-\[2\.5rem\] {
-    font-size: 2.5rem;
-  }
-  .text-\[2\.25rem\] {
-    font-size: 2.25rem;
-  }
-  .text-deep-mocha {
-    color: var(--color-deep-mocha);
-  }
-  .text-parchment {
-    color: var(--color-parchment);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
   }
 }
 * {
@@ -321,12 +206,12 @@ body {
   grid-template-rows: auto 1fr auto;
   gap: calc(var(--spacing) * 10);
   background-color: var(--color-parchment);
-  font-size: 1.25rem;
+  font-size: 1rem;
   color: var(--color-deep-mocha);
 }
 .header {
   display: flex;
-  height: 110px;
+  height: 75px;
   width: 100%;
   flex-direction: row;
   align-items: center;
@@ -334,13 +219,28 @@ body {
   background-color: var(--color-bone);
   padding-inline: calc(var(--spacing) * 8);
 }
+.header svg {
+  height: calc(var(--spacing) * 10);
+  width: calc(var(--spacing) * 10);
+}
+.botonestil .iconeFletxa {
+  height: calc(var(--spacing) * 4);
+  width: calc(var(--spacing) * 4);
+  flex-shrink: 0;
+}
+.botonestil svg {
+  height: calc(var(--spacing) * 10);
+  width: calc(var(--spacing) * 10);
+  flex-shrink: 0;
+}
 .header h1 {
   font-size: 2.25rem;
 }
 .header nav {
   display: flex;
   flex-direction: column;
-  font-size: 1.25rem;
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
 }
 .login {
   display: flex;
@@ -375,14 +275,16 @@ body {
   display: block;
   border-radius: 0.25rem;
   padding: calc(var(--spacing) * 3);
-  font-size: 1.25rem;
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   color: var(--color-parchment);
 }
 .desplegable .menu button {
   display: block;
   border-radius: 0.25rem;
   padding: calc(var(--spacing) * 3);
-  font-size: 1.25rem;
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
   color: var(--color-parchment);
 }
 .desplegable:hover .menu {
@@ -404,24 +306,7 @@ footer {
   align-items: center;
   justify-content: center;
   background-color: var(--color-bone);
-  font-size: 1.25rem;
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
   color: var(--color-deep-mocha);
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
-    }
-  }
 }

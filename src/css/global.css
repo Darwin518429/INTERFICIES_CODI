@@ -39,15 +39,25 @@ body {
   /*grid-rows-[auto_1fr_auto] --> SON 3 FILES DELS TAMANYS AUTO S'AJUSTA EL TAMANY DEL CONTINGUT 1FR ESPAI QUE SOBRE 
   min-h-screen ajustar el boy a la mida de la pantalla 
   */
-  @apply bg-parchment min-h-screen text-deep-mocha text-[1.25rem] grid grid-cols-1 grid-rows-[auto_1fr_auto] gap-10;
+  @apply bg-parchment min-h-screen text-deep-mocha text-[1rem] grid grid-cols-1 grid-rows-[auto_1fr_auto] gap-10;
 }
+
+
 
 /*Capçalera */
 .header {
   /*PX: padding izquierda + derecha*/
-  @apply bg-bone w-full h-[110px] flex flex-row items-center justify-between px-8;
+  @apply bg-bone w-full h-[75px] flex flex-row items-center justify-between px-8;
 }
-
+.header svg {
+  @apply w-10 h-10
+}
+.botonestil .iconeFletxa{
+    @apply w-4 h-4 shrink-0;
+}
+.botonestil svg {
+    @apply w-10 h-10 shrink-0;
+}
 /*CALCULAR REM:
 Pixels ÷ 16 =  X rem*/
 
@@ -59,7 +69,7 @@ Pixels ÷ 16 =  X rem*/
 }
 
 .header nav {
-  @apply text-[1.25rem] flex flex-col;
+  @apply text-lg flex flex-col;
 }
 
 /*HIJO DIRECTO*/
@@ -85,11 +95,11 @@ Pixels ÷ 16 =  X rem*/
 }
 
 .desplegable .menu a {
-  @apply block rounded p-3 text-parchment text-[1.25rem];
+  @apply block rounded p-3 text-parchment text-base;
 }
 
 .desplegable .menu button {
-  @apply block rounded p-3 text-parchment text-[1.25rem];
+  @apply block rounded p-3 text-parchment text-base;
 }
 
 .desplegable:hover .menu {
@@ -104,5 +114,5 @@ Pixels ÷ 16 =  X rem*/
 
 /*FOOTER*/
 footer {
-  @apply flex flex-row justify-center items-center bg-bone w-full h-[62px] text-deep-mocha text-[1.25rem];
+  @apply flex flex-row justify-center items-center bg-bone w-full h-[62px] text-deep-mocha text-lg;
 }

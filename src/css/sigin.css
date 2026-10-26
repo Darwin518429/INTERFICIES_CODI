@@ -7,11 +7,11 @@
 .form_Registrar {
 
   /*rounded redondear  las esquinas de un*/
-  @apply bg-deep-mocha w-[639px] h-[721px] rounded-[30px] flex flex-col items-center justify-around gap-0
+  @apply bg-deep-mocha w-[539px] h-[621px] rounded-[30px] flex flex-col items-center justify-around gap-0
 }
 
 .form_Registrar * {
-  @apply text-parchment
+  @apply text-parchment text-base
 }
 
 .form_Registrar legend {
@@ -49,7 +49,7 @@
 }
 
 .contenidorImatge {
-  @apply w-[715px] h-[715px] flex flex-col items-center justify-center text-[2.5rem]
+  @apply w-[615px] h-[615px] flex flex-col items-center justify-center text-[2.5rem]
 }
 
 /*max-w-full combinada amb h-auto (o
