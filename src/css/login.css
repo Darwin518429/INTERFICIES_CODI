@@ -1,0 +1,64 @@
+@import "tailwindcss";
+/*IMPORTAR NOMES LES  Variables*/
+@reference "./global.css";
+
+/*COMANDA*/
+/*npx @tailwindcss/cli -i ./src/css/sigin.css -o ./public/css/sigin.css --watch*/
+.form_Registrar {
+
+  /*rounded redondear  las esquinas de un*/
+  @apply bg-deep-mocha w-[696px] h-[699.55px] rounded-[30px] flex flex-col items-center justify-around gap-0
+}
+
+.form_Registrar * {
+  @apply text-parchment
+}
+
+.form_Registrar legend {
+  @apply text-[2.25rem]
+}
+
+.form_Registrar input {
+  @apply bg-parchment text-deep-mocha rounded-[10px] w-[455.92px] h-[40.2px]
+}
+
+.juntarCamps {
+  @apply flex flex-col
+}
+
+.juntarPanel_img {
+  @apply flex justify-around items-center gap-4 w-full
+}
+
+/*SEPARADOR*/
+
+.separador {
+  @apply flex justify-center items-center gap-4 w-full;
+}
+
+.separador span {
+  @apply h-px w-[143px] bg-parchment;
+}
+
+.separador p {
+  @apply text-parchment leading-none;
+}
+
+.botons {
+  @apply bg-parchment text-deep-mocha rounded-[10px] w-[262px] h-[47.02px]
+}
+
+.contenidorImatge {
+  @apply w-[715px] h-[715px] flex flex-col items-center justify-center text-[2.5rem]
+}
+
+/*max-w-full combinada amb h-auto (o
+simplement w-full h-auto), juntament amb object-cover per mantenir les
+proporcions dins un contenidor.*/
+.imatge {
+  @apply w-full h-auto object-cover overflow-hidden
+}
+
+figure h2 {
+  @apply relative top-15;
+}

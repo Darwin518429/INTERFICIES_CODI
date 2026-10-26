@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sessio</title>
+    <link href="../public/css/global.css" rel="stylesheet">
+    <link href="../public/css/login.css" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="filaInterior">
+            <h1>WINDOCS</h1>
+            <nav>
+
+                <div class="desplegable">
+                    <button class="botonestil">
+                        Ajuda
+                        <svg class="h-[20px] w-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path fill="#4A3B32" d="
+M1 137.468536
+C4.005838 132.164566 6.498683 126.901604 10.108858 122.569839
+C23.665638 106.303352 49.398029 107.647736 64.205307 122.543419
+C126.914864 185.627335 189.921463 248.415939 252.795700 311.336273
+C254.073944 312.615417 255.063400 314.183167 256.382233 315.864441
+C258.366974 313.992279 259.695465 312.801483 260.955261 311.541901
+C324.093079 248.414062 387.194122 185.249405 450.386688 122.176392
+C461.493256 111.090820 474.900848 107.805603 489.725555 113.057770
+C501.789337 117.331772 509.694519 125.850418 512.626282 138.877930
+C513 144.022095 513 149.044189 513 154.533142
+C510.079498 164.962616 503.404144 172.220932 496.236603 179.370605
+C424.993195 250.436447 353.882202 321.635071 282.709808 392.772125
+C268.669739 406.805206 245.359528 406.815155 231.394424 392.861206
+C157.972244 319.497437 84.554428 246.129135 11.307741 172.590454
+C7.309327 168.576111 4.866098 163.012756 1.349479 158.085220
+C1 151.312363 1 144.624710 1 137.468536Z" />
+                        </svg>
+                    </button>
+                    <!--  ocultar  i nomes  visible al pasar el cursor. -->
+                    <div class="menu">
+                        <a href="#">
+                            Guia
+                        </a>
+                        <a href="#">
+                            Documentacio
+                        </a>
+                        <a href="#">
+                            Sobre l'aplicacio
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="filaInterior">
+            <div class="desplegable">
+                <button class="botonestil">
+                    <svg class="w-[69px] h-[69px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none"
+                        stroke="#4A3B32" stroke-width="21">
+                        <circle cx="258" cy="257" r="192" />
+                        <ellipse cx="258" cy="257" rx="101" ry="192" />
+                        <path d="M258 65v384M66 257h384M88 168h340M85 341h346" />
+                    </svg>
+
+                    <svg class="h-[20px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#4A3B32" d="
+M1 137.468536
+C4.005838 132.164566 6.498683 126.901604 10.108858 122.569839
+C23.665638 106.303352 49.398029 107.647736 64.205307 122.543419
+C126.914864 185.627335 189.921463 248.415939 252.795700 311.336273
+C254.073944 312.615417 255.063400 314.183167 256.382233 315.864441
+C258.366974 313.992279 259.695465 312.801483 260.955261 311.541901
+C324.093079 248.414062 387.194122 185.249405 450.386688 122.176392
+C461.493256 111.090820 474.900848 107.805603 489.725555 113.057770
+C501.789337 117.331772 509.694519 125.850418 512.626282 138.877930
+C513 144.022095 513 149.044189 513 154.533142
+C510.079498 164.962616 503.404144 172.220932 496.236603 179.370605
+C424.993195 250.436447 353.882202 321.635071 282.709808 392.772125
+C268.669739 406.805206 245.359528 406.815155 231.394424 392.861206
+C157.972244 319.497437 84.554428 246.129135 11.307741 172.590454
+C7.309327 168.576111 4.866098 163.012756 1.349479 158.085220
+C1 151.312363 1 144.624710 1 137.468536Z" />
+                    </svg>
+                </button>
+                <div class="menu">
+                    <button>
+                        Catala
+                    </button>
+                    <button>
+                        Angles
+                    </button>
+                    <button>
+                        Castella
+                    </button>
+
+                </div>
+            </div>
+            <div class="login">
+                <a href="./signIn.html">Registrar</a>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="juntarPanel_img">
+            <form class="form_Registrar" action="../index.html">
+                <legend>Iniciar sessió</legend>
+
+                <div class="juntarCamps  ">
+                    <label for="email">Email</label>
+                    <input id="email" type="text">
+                </div>
+                <div class="juntarCamps">
+                    <label for="pass">Contrasenya</label>
+                    <input class="campslog" id="pass" type="password">
+
+                </div>
+
+                <a href="#"> Heu oblidat la contrasenya?</a>
+
+
+
+
+                <button class="botons" type="submit">Iniciar</button>
+
+                <div class="separador">
+                    <span></span>
+                    <p>O AMB</p>
+                    <span></span>
+                </div>
+                <button class="botons" type="submit">Google</button>
+                <button class="botons" type="submit">Git hub</button>
+
+            </form>
+
+
+            <figure class="contenidorImatge">
+                <h2 class="titolImatge"> Els teus apunts,<br>
+                    en un mateix lloc</h2>
+
+                <picture>
+
+                    <!-- ATRIBUT PER CONTROLAER TAMANY media="(max-width:480px)"-->
+                    <source srcset="../public/img/login/login.png">
+                    <!-- IMATGE PRINCIPAL  GRAN -->
+                    <img class="imatge" src="../public/img/login/login.webp" alt="WEBP FORMAT ICONE LLAPIS">
+                </picture>
+
+            </figure>
+        </div>
+        <!--
+        
+<picture>
+     
+        <source media="(max-width:480px)" srcset="../PRIMER_PART/webp/plujaEstels.webp">
+        <source media="(max-width:768px)" srcset="../PRIMER_PART/transparencyComprimit.png">
+
+        <img src="../PRIMER_PART/concert.jpg" alt="Algo" style="width:100%; height: auto; ">
+    </picture>
+-->
+
+    </main>
+    <footer>
+        <p>© 2026 WinDocs · Privacitat · Contacte</p>
+
+    </footer>
+</body>
+
+</html>

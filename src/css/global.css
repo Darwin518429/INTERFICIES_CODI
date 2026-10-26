@@ -1,0 +1,108 @@
+/* ARXIUS QUE SON EL INPUT INTRUCCIONS DEL TAILWIND PER INTRODUIR */
+@import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+@import "tailwindcss";
+
+/*EXECUTAR AIXO:
+PER TRNASPILAR/COMPILAR EL ARXIU INPUT.CSS
+npx @tailwindcss/cli -i ./src/css/global.css  -o ./public/css/global.css --watch*/
+
+* {
+  @apply font-lex;
+}
+
+/*ESPAI PER CREAR VARIABLES PER GENERAR AQUESTES CLASSES */
+@theme {
+  /*COLORS*/
+  --color-parchment: #F4F0EB;
+  --color-bone: #E3DAC9;
+  --color-deep-mocha: #4A3B32;
+
+  /*TEXT*/
+  --font-lex: "Lexend", Arial;
+}
+
+
+
+
+
+/*
+EL QUE TENEN -- INDICA LA PARAULA CLAU PER DEFINIR QUIN TIPUS DE CLASSE ES GENERA:
+
+Colores (--color-*) → bg-bone, text-bone
+Fuentes (--font-*) → font-titulos
+Puntos de ruptura (--breakpoint-*) → desktop:flex
+Tamaños de texto (--text-*) → text-titulo
+Espaciado (--spacing-*) → clases como p-*, m-*, w-*
+*/
+
+body {
+  /*grid-rows-[auto_1fr_auto] --> SON 3 FILES DELS TAMANYS AUTO S'AJUSTA EL TAMANY DEL CONTINGUT 1FR ESPAI QUE SOBRE 
+  min-h-screen ajustar el boy a la mida de la pantalla 
+  */
+  @apply bg-parchment min-h-screen text-deep-mocha text-[1.25rem] grid grid-cols-1 grid-rows-[auto_1fr_auto] gap-10;
+}
+
+/*Capçalera */
+.header {
+  /*PX: padding izquierda + derecha*/
+  @apply bg-bone w-full h-[110px] flex flex-row items-center justify-between px-8;
+}
+
+/*CALCULAR REM:
+Pixels ÷ 16 =  X rem*/
+
+/*PROBLEMA: EL TITOL I EL BOTON ESTAVEN DESLINEATS EL QUE VAIG FER ES UTILITZAR MES ESPAI*/
+
+/*LEADING NONE ES PER TREURE COM ELS ESPAI QUE TENEN DINS DE UN ELEMET*/
+.header h1 {
+  @apply text-[2.25rem]
+}
+
+.header nav {
+  @apply text-[1.25rem] flex flex-col;
+}
+
+/*HIJO DIRECTO*/
+.login {
+  @apply text-[1.25rem] bg-deep-mocha text-parchment w-[163px] h-[50px] rounded-[30px] flex justify-center items-center self-center;
+}
+
+
+
+/*DESPLEGABLE*/
+
+/*BOTON DESPEGABLE ORIENTACION*/
+.botonestil {
+  @apply flex items-center gap-3
+}
+
+.desplegable {
+  @apply relative w-fit;
+}
+
+.desplegable .menu {
+  @apply absolute left-0 top-full hidden bg-deep-mocha rounded-[30px];
+}
+
+.desplegable .menu a {
+  @apply block rounded p-3 text-parchment text-[1.25rem];
+}
+
+.desplegable .menu button {
+  @apply block rounded p-3 text-parchment text-[1.25rem];
+}
+
+.desplegable:hover .menu {
+  @apply flex flex-col flex-wrap;
+}
+
+
+/*JUNTAR LES OPCIONS */
+.filaInterior {
+  @apply flex flex-row items-center gap-10;
+}
+
+/*FOOTER*/
+footer {
+  @apply flex flex-row justify-center items-center bg-bone w-full h-[62px] text-deep-mocha text-[1.25rem];
+}
