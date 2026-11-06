@@ -174,23 +174,8 @@
   .visible {
     visibility: visible;
   }
-  .h-\[10px\] {
-    height: 10px;
-  }
-  .h-\[20px\] {
-    height: 20px;
-  }
-  .h-\[69px\] {
-    height: 69px;
-  }
   .h-full {
     height: 100%;
-  }
-  .w-\[20px\] {
-    width: 20px;
-  }
-  .w-\[69px\] {
-    width: 69px;
   }
   .w-full {
     width: 100%;
@@ -201,10 +186,10 @@
 }
 body {
   display: grid;
-  min-height: 100vh;
+  height: 100vh;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: auto 1fr auto;
-  gap: calc(var(--spacing) * 10);
+  gap: calc(var(--spacing) * 3);
   background-color: var(--color-parchment);
   font-size: 1rem;
   color: var(--color-deep-mocha);
@@ -268,7 +253,7 @@ body {
   top: 100%;
   left: 0px;
   display: none;
-  border-radius: 30px;
+  border-radius: 20px;
   background-color: var(--color-deep-mocha);
 }
 .desplegable .menu a {
