@@ -14,6 +14,9 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --color-parchment: #F4F0EB;
@@ -252,6 +255,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0px;
+  z-index: 10;
   display: none;
   border-radius: 20px;
   background-color: var(--color-deep-mocha);

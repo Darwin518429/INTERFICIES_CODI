@@ -4,7 +4,7 @@
 /*npx @tailwindcss/cli -i ./src/css/index.css -o ./public/css/index.css --watch*/
 
 .contenidor_ext {
-    @apply w-full h-[400px] bg-bone mx-auto rounded-[20px] flex flex-col
+    @apply w-full h-[400px] bg-bone mx-auto rounded-[20px] flex flex-col;
 }
 
 .btn-crear {
@@ -16,16 +16,16 @@
 }
 
 main {
-    @apply flex flex-col items-end w-[75%] h-full  mx-auto gap-10
+    @apply flex flex-col items-end w-[75%] h-full  mx-auto gap-10;
 }
 
 .grupbts {
-    @apply flex gap-10
+    @apply flex gap-10;
 }
 
 /*Rounded-t indica les 2 vores/"borde" */
 .barraInterior {
-    @apply w-full bg-deep-mocha h-[100px] rounded-t-[20px] text-parchment flex justify-between items-center px-10 shrink-0
+    @apply w-full bg-deep-mocha h-[100px] rounded-t-[20px] text-parchment flex justify-between items-center px-10 shrink-0;
 }
 
 input {
@@ -33,11 +33,11 @@ input {
 }
 
 #lupa {
-    @apply w-[50px] h-[50px] leading-none
+    @apply w-[50px] h-[50px] leading-none;
 }
 
 #scroll{
-    @apply flex-1  overflow-y-scroll bg-bone px-8 py-10 rounded-b-[20px]
+    @apply flex-1  overflow-y-scroll bg-bone px-8 py-10 rounded-b-[20px];
 }
 
 /*Tarjeta */
@@ -63,5 +63,5 @@ input {
 }
 
 .ordenarGrid{
-  @apply grid grid-cols-5 gap-x-16 gap-y-8
+  @apply grid grid-cols-5 gap-x-16 gap-y-8;
 }

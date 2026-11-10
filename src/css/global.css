@@ -91,7 +91,7 @@ Pixels ÷ 16 =  X rem*/
 }
 
 .desplegable .menu {
-  @apply absolute left-0 top-full hidden bg-deep-mocha rounded-[20px];
+  @apply absolute left-0 top-full hidden bg-deep-mocha rounded-[20px] z-10;
 }
 
 .desplegable .menu a {
