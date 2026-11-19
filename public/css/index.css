@@ -157,11 +157,16 @@
   .visible {
     visibility: visible;
   }
-  .h-full {
-    height: 100%;
-  }
-  .w-full {
-    width: 100%;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
   }
 }
 .contenidor_ext {
@@ -223,6 +228,7 @@ input {
   align-self: center;
   border-radius: 10px;
   background-color: var(--color-parchment, #F4F0EB);
+  padding-inline: calc(var(--spacing, 0.25rem) * 2);
   color: var(--color-deep-mocha, #4A3B32);
 }
 #lupa {
@@ -252,7 +258,19 @@ input {
   border-radius: 20px;
   background-color: var(--color-white, #fff);
 }
+.tarjeta button {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+.tarjeta:has(button:focus-visible) {
+  outline-style: var(--tw-outline-style);
+  outline-width: 4px;
+  outline-offset: 2px;
+  outline-color: #B0B0B0;
+}
 .tarjeta-icona {
+  display: block;
   height: 100px;
   padding: calc(var(--spacing, 0.25rem) * 4);
 }
@@ -261,6 +279,7 @@ input {
   width: 100%;
 }
 .tarjeta-nom {
+  display: block;
   background-color: #F4F0EB;
   padding-block: calc(var(--spacing, 0.25rem) * 4);
   text-align: center;
@@ -277,10 +296,16 @@ input {
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-leading: initial;
+      --tw-outline-style: solid;
     }
   }
 }

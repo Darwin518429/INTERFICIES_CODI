@@ -1,5 +1,21 @@
 const  MISSATGE = document.getElementById("avis");
 
+document.querySelectorAll('.desplegable').forEach((d) => {
+  const boton = d.querySelector('button');
+
+  const set = (abierto) => {
+    boton.setAttribute('aria-expanded', String(abierto));
+    MISSATGE.textContent = "Despegable canviat";
+  };
+
+  d.addEventListener('focusin', () => set(true));
+  d.addEventListener('mouseenter', () => set(true));
+  d.addEventListener('focusout', (e) => {
+    if (!d.contains(e.relatedTarget)) set(false);
+  });
+  d.addEventListener('mouseleave', () => set(false));
+});
+/*
 const TANCAT = "Despegable tancat"
 document.querySelectorAll('.desplegable').forEach((d) => {
   const boton = d.querySelector('button');
@@ -20,7 +36,7 @@ document.querySelectorAll('.desplegable').forEach((d) => {
   });
 });
 
-
+*/
 // ===== ERRORS DEL FORMULARI =====
 const form = document.querySelector('.form_Registrar');
 form.noValidate = true; // el navegador no valida ni bloquea: ho fem nosaltres

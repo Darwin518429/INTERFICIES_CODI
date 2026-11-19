@@ -1,43 +1,44 @@
-
 @import "tailwindcss";
 @reference "./global.css";
 /*npx @tailwindcss/cli -i ./src/css/index.css -o ./public/css/index.css --watch*/
 
+
+
 .contenidor_ext {
-    @apply w-full h-[400px] bg-bone mx-auto rounded-[20px] flex flex-col;
+  @apply w-full h-[400px] bg-bone mx-auto rounded-[20px] flex flex-col;
 }
 
 .btn-crear {
-    @apply bg-deep-mocha text-parchment rounded-[10px] w-[188px] h-[60px] flex items-center justify-between gap-1 px-5 overflow-hidden;
+  @apply bg-deep-mocha text-parchment rounded-[10px] w-[188px] h-[60px] flex items-center justify-between gap-1 px-5 overflow-hidden;
 }
 
 .btn-crear svg {
-    @apply w-10 h-10 shrink-0;
+  @apply w-10 h-10 shrink-0;
 }
 
 main {
-    @apply flex flex-col items-end w-[75%] h-full  mx-auto gap-10;
+  @apply flex flex-col items-end w-[75%] h-full mx-auto gap-10;
 }
 
 .grupbts {
-    @apply flex gap-10;
+  @apply flex gap-10;
 }
 
 /*Rounded-t indica les 2 vores/"borde" */
 .barraInterior {
-    @apply w-full bg-deep-mocha h-[100px] rounded-t-[20px] text-parchment flex justify-between items-center px-10 shrink-0;
+  @apply w-full bg-deep-mocha h-[100px] rounded-t-[20px] text-parchment flex justify-between items-center px-10 shrink-0;
 }
 
 input {
-    @apply bg-parchment w-[243px] h-[33px] text-deep-mocha rounded-[10px] self-center
+  @apply bg-parchment w-[243px] h-[33px] text-deep-mocha rounded-[10px] self-center px-2
 }
 
 #lupa {
-    @apply w-[50px] h-[50px] leading-none;
+  @apply w-[50px] h-[50px] leading-none;
 }
 
-#scroll{
-    @apply flex-1  overflow-y-scroll bg-bone px-8 py-10 rounded-b-[20px];
+#scroll {
+  @apply flex-1 overflow-y-scroll bg-bone px-8 py-10 rounded-b-[20px];
 }
 
 /*Tarjeta */
@@ -50,18 +51,25 @@ input {
   @apply bg-white rounded-[20px] overflow-hidden;
 }
 
-.tarjeta-icona {
-  @apply h-[100px] p-4;
+.tarjeta button {
+  @apply block w-full text-left;
 }
 
+ .tarjeta:has(button:focus-visible) {
+  @apply outline-[#B0B0B0] outline-4 outline-offset-2;
+}
+
+
+.tarjeta-icona {
+  @apply block h-[100px] p-4;
+}
 .tarjeta-icona svg {
   @apply w-full h-full;
 }
 
 .tarjeta-nom {
-  @apply bg-[#F4F0EB] text-center text-base py-4;
+  @apply block bg-[#F4F0EB] text-center text-base py-4;
 }
-
-.ordenarGrid{
+.ordenarGrid {
   @apply grid grid-cols-5 gap-x-16 gap-y-8;
 }

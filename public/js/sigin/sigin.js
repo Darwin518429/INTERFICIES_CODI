@@ -1,23 +1,15 @@
-const  MISSATGE = document.getElementById("avis");
+const MISSATGE = document.getElementById("avis");
 
-const TANCAT = "Despegable tancat"
 document.querySelectorAll('.desplegable').forEach((d) => {
   const boton = d.querySelector('button');
-  
   const set = (abierto) => boton.setAttribute('aria-expanded', String(abierto));
 
-  d.addEventListener('focusin', () =>{ 
-    set(true)
-  });
-  d.addEventListener('focusout', (e) => {
-    if (!d.contains(e.relatedTarget)) {set(false);
-        MISSATGE.innerText =TANCAT
-    }
-  });
+  d.addEventListener('focusin', () => set(true));
   d.addEventListener('mouseenter', () => set(true));
-  d.addEventListener('mouseleave', () => {set(false)
-     MISSATGE.innerText = TANCAT
+  d.addEventListener('focusout', (e) => {
+    if (!d.contains(e.relatedTarget)) set(false);
   });
+  d.addEventListener('mouseleave', () => set(false));
 });
 
 
@@ -31,7 +23,7 @@ const campos = ['nom', 'cognom', 'email', 'pass', 'pass_2'];
 
 function missatgeError(input) {
   if (input.value.trim() === '') return 'Aquest camp és obligatori';
-const FORMAT = /^[a-zA-Z0-9]{3,}@[a-z]{3,}\.[a-z]{3,}$/
+  const FORMAT = /^[a-zA-Z0-9]{3,}@[a-z]{3,}\.[a-z]{3,}$/
   if (input.id === 'email' && !FORMAT.test(input.value)) {
     return 'Format incorrecte, exemple: nom@correu.com';
   }
