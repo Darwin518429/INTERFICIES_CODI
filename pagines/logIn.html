@@ -66,20 +66,22 @@
     </header>
     <main id="contingut" tabindex="-1">
         <div class="juntarPanel_img">
-            <form class="form_Registrar" action="../index.html">
-                <fieldset>
-                    <legend>Iniciar sessió</legend>
-                    <div class="juntarCamps">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" aria-describedby="emailHint" />
-                        <p class="hint" id="emailHint"></p>
-                    </div>
-                    <div class="juntarCamps">
-                        <label for="pass">Contrasenya</label>
-                        <input class="campslog" id="pass" type="password" aria-describedby="passHint" />
-                        <p class="hint" id="passHint"></p>
-                    </div>
-                </fieldset>
+            <form class="form_Registrar" action="../index.html" >
+    <fieldset>
+        <legend>Iniciar sessió</legend>
+        <div class="juntarCamps">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email"
+                aria-required="true" aria-describedby="emailHint" />
+            <p class="hint" id="emailHint"></p>
+        </div>
+        <div class="juntarCamps">
+            <label for="pass">Contrasenya</label>
+            <input class="campslog" id="pass" name="pass" type="password" autocomplete="current-password"
+                aria-required="true" aria-describedby="passHint" />
+            <p class="hint" id="passHint"></p>
+        </div>
+    </fieldset>
 
                 <a href="#"> Heu oblidat la contrasenya?</a>
 

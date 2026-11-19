@@ -46,7 +46,6 @@ function ocultarError(input, hint) {
 
 
 form.addEventListener('submit', (e) => {
-  e.preventDefault();
   let primerError = null; // el primer input amb error, per posar-hi el focus
   let totalErrors = 0;
 
