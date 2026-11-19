@@ -5,25 +5,35 @@
 /*COMANDA*/
 /*npx @tailwindcss/cli -i ./src/css/sigin.css -o ./public/css/sigin.css --watch*/
 .form_Registrar {
-
-  /*rounded redondear  las esquinas de un*/
-  @apply bg-deep-mocha w-[580px] h-[580px] rounded-[30px] flex flex-col items-center justify-around gap-0
+  @apply bg-deep-mocha w-[500px] rounded-[24px] flex flex-col items-center gap-4 py-3;
 }
 
-.form_Registrar * {
-  @apply text-parchment text-base
+.form_Registrar fieldset {
+@apply flex flex-col justify-center gap-4 px-4;
 }
 
 .form_Registrar legend {
-  @apply text-[2.25rem]
+  @apply text-[1.5rem] text-center;
+}
+
+.form_Registrar * {
+  @apply text-parchment;
+}
+
+.form_Registrar legend {
+  @apply text-[1.75rem] ;
 }
 
 .form_Registrar input {
-  @apply bg-parchment text-deep-mocha rounded-[10px] w-[407.1px] h-[30.46px]
+   @apply bg-parchment text-deep-mocha rounded-[8px] w-[380px] h-[28px] px-2 transition-shadow duration-300 ease-in-out px-2;
+}
+
+.form_Registrar input:focus {
+ @apply outline-[2px_solid_bone] shadow-[3px_3px_5px_3px_var(--color-bone)] ;
 }
 
 .juntarCamps {
-  @apply flex flex-col text-base
+  @apply flex flex-col;
 }
 
 .juntarPanel_img {
@@ -33,11 +43,11 @@
 /*SEPARADOR*/
 
 .separador {
-  @apply flex justify-center items-center gap-4 w-full;
+  @apply flex justify-center items-center gap-3 w-full;
 }
 
 .separador span {
-  @apply h-px w-[143px] bg-parchment;
+  @apply h-px w-[110px] bg-parchment;
 }
 
 .separador p {
@@ -45,20 +55,36 @@
 }
 
 .botons {
-  @apply bg-parchment text-deep-mocha rounded-[10px] w-[262px] h-[47.02px]
+  @apply bg-parchment text-deep-mocha rounded-[16px] w-[220px] h-[34px] shrink-0;
 }
 
 .contenidorImatge {
-  @apply w-[615px] h-[615px] flex flex-col items-center justify-center text-[2.5rem]
+  @apply w-[615px] h-[615px] flex flex-col items-center justify-center text-[2.5rem];
+}
+
+.botonsSocials {
+  @apply flex flex-row gap-3;
+}
+
+.botonsSocials .botons {
+  @apply w-[170px];
 }
 
 /*max-w-full combinada amb h-auto (o
 simplement w-full h-auto), juntament amb object-cover per mantenir les
-proporcions dins un contenidor*/
+proporcions dins un contenidor.*/
 .imatge {
-  @apply w-full h-auto object-cover overflow-hidden
+  @apply w-full h-auto object-cover overflow-hidden;
 }
 
 figure h2 {
-  @apply relative top-15;
+  @apply relative top-20;
 }
+
+
+.hint {
+      @apply hidden text-parchment;
+    }
+.hint.visible {
+      @apply block;
+    }

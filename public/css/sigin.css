@@ -168,11 +168,157 @@
     white-space: nowrap;
     border-width: 0;
   }
+  .relative {
+    position: relative;
+  }
+  .flex {
+    display: flex;
+  }
+  .hidden {
+    display: none;
+  }
+  .table {
+    display: table;
+  }
+  .h-\[28px\] {
+    height: 28px;
+  }
+  .h-\[47\.02px\] {
+    height: 47.02px;
+  }
+  .h-\[580px\] {
+    height: 580px;
+  }
+  .h-\[615px\] {
+    height: 615px;
+  }
+  .h-auto {
+    height: auto;
+  }
   .h-full {
     height: 100%;
   }
+  .h-px {
+    height: 1px;
+  }
+  .w-\[143px\] {
+    width: 143px;
+  }
+  .w-\[262px\] {
+    width: 262px;
+  }
+  .w-\[380px\] {
+    width: 380px;
+  }
+  .w-\[580px\] {
+    width: 580px;
+  }
+  .w-\[615px\] {
+    width: 615px;
+  }
   .w-full {
     width: 100%;
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-around {
+    justify-content: space-around;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing, 0.25rem) * 4);
+  }
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  .rounded-\[8px\] {
+    border-radius: 8px;
+  }
+  .rounded-\[10px\] {
+    border-radius: 10px;
+  }
+  .rounded-\[30px\] {
+    border-radius: 30px;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .bg-deep-mocha {
+    background-color: var(--color-deep-mocha, #4A3B32);
+  }
+  .bg-parchment {
+    background-color: var(--color-parchment, #F4F0EB);
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .px-2 {
+    padding-inline: calc(var(--spacing, 0.25rem) * 2);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing, 0.25rem) * 4);
+  }
+  .text-base {
+    font-size: var(--text-base, 1rem);
+    line-height: var(--tw-leading, var(--text-base--line-height, calc(1.5 / 1)));
+  }
+  .text-\[1\.5rem\] {
+    font-size: 1.5rem;
+  }
+  .text-\[2\.5rem\] {
+    font-size: 2.5rem;
+  }
+  .text-deep-mocha {
+    color: var(--color-deep-mocha, #4A3B32);
+  }
+  .text-parchment {
+    color: var(--color-parchment, #F4F0EB);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .shadow-\[3px_3px_5px_3px_var\(--color-bone\)\] {
+    --tw-shadow: 3px 3px 5px 3px var(--tw-shadow-color, var(--color-bone));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
+  .outline-\[2px_solid_bone\] {
+    outline-color: 2px solid bone;
+  }
+  .transition-shadow {
+    transition-property: box-shadow;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(0.4, 0, 0.2, 1)));
+    transition-duration: var(--tw-duration, var(--default-transition-duration, 150ms));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .ease-in-out {
+    --tw-ease: var(--ease-in-out, cubic-bezier(0.4, 0, 0.2, 1));
+    transition-timing-function: var(--ease-in-out, cubic-bezier(0.4, 0, 0.2, 1));
   }
 }
 .form_Registrar {
@@ -180,7 +326,7 @@
   width: 480px;
   flex-direction: column;
   align-items: center;
-  gap: calc(var(--spacing, 0.25rem) * 2);
+  gap: calc(var(--spacing, 0.25rem) * 4);
   border-radius: 24px;
   background-color: var(--color-deep-mocha, #4A3B32);
   padding-block: calc(var(--spacing, 0.25rem) * 3);
@@ -219,7 +365,7 @@
   transition-timing-function: var(--ease-in-out, cubic-bezier(0.4, 0, 0.2, 1));
 }
 .form_Registrar input:focus {
-  --tw-shadow: 5px 5px 8px 5px var(--tw-shadow-color, var(--color-bone));
+  --tw-shadow: 3px 3px 5px 3px var(--tw-shadow-color, var(--color-bone));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   outline-color: 2px solid bone;
 }
@@ -293,13 +439,10 @@ figure h2 {
 .hint.visible {
   display: block;
 }
-@property --tw-duration {
+@property --tw-border-style {
   syntax: "*";
   inherits: false;
-}
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
+  initial-value: solid;
 }
 @property --tw-shadow {
   syntax: "*";
@@ -366,6 +509,19 @@ figure h2 {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -373,8 +529,7 @@ figure h2 {
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-duration: initial;
-      --tw-ease: initial;
+      --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -389,6 +544,9 @@ figure h2 {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
+      --tw-duration: initial;
+      --tw-ease: initial;
       --tw-leading: initial;
     }
   }

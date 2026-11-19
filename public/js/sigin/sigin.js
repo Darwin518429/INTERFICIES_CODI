@@ -16,7 +16,7 @@ document.querySelectorAll('.desplegable').forEach((d) => {
   });
   d.addEventListener('mouseenter', () => set(true));
   d.addEventListener('mouseleave', () => {set(false)
-     MISSATGE.innerText =TANCAT
+     MISSATGE.innerText = TANCAT
   });
 });
 
@@ -33,7 +33,7 @@ function missatgeError(input) {
   if (input.value.trim() === '') return 'Aquest camp és obligatori';
 const FORMAT = /^[a-zA-Z0-9]{3,}@[a-z]{3,}\.[a-z]{3,}$/
   if (input.id === 'email' && !FORMAT.test(input.value)) {
-    return 'Format incorrecte. Exemple: nom@correu.com';
+    return 'Format incorrecte, exemple: nom@correu.com';
   }
 
   if (input.id === 'pass_2') {
@@ -81,7 +81,7 @@ form.addEventListener('submit', (e) => {
   if (primerError) {
     e.preventDefault(); // AQUÍ bloqueges l'enviament
     MISSATGE.textContent = '';
-    MISSATGE.textContent = `Hi ha ${totalErrors} error(s) al formulari`;
+    MISSATGE.textContent = `Hi ha ${totalErrors} errors al formulari`;
     primerError.focus();
   }
 });

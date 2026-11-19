@@ -24,17 +24,14 @@ npx @tailwindcss/cli -i ./src/css/global.css  -o ./public/css/global.css --watch
 }
 
 
- header a:focus-visible,
- button:focus-visible,
+header a:focus-visible,
+button:focus-visible,
 main:focus-visible {
-
   @apply outline-[#B0B0B0] outline-4 outline-offset-2;
-  /*outline: 3px solid #4A3B32;
-  outline-offset: 2px;*/
 }
 
 
-  .skip-link {
+.skip-link {
     @apply absolute left-0 -top-full;
   }
 

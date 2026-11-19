@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 
 <head>
     <meta charset="UTF-8">
@@ -8,16 +8,20 @@
     <link href="../public/css/global.css" rel="stylesheet">
     <link href="../public/css/login.css" rel="stylesheet">
     <script defer src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="../public/js/login/login.js"></script>
 </head>
 
 <body>
-        <header class="header">
-        <h1>WINDOCS</h1>
+    <a class="skip-link" href="#contingut">Saltar al contingut principal</a>
 
+    <header class="header">
+        <!-- Missatges per canvis de estat  -->
+        <div id="avis" aria-live="polite" class="sr-only"></div>
+        <h1>WINDOCS</h1>
+        <!-- El lector llegira aquest missatge -->
         <nav aria-label="Navegació principal">
-            <!-- Group seria  com una referencia  per poder accedir el elemnent especifica -->
             <div class="desplegable">
-                <button class="botonestil" type="button" aria-haspopup="true">
+                <button class="botonestil" type="button" aria-expanded="false">
                     Ajuda
                     <svg class="iconeFletxa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                         aria-hidden="true">
@@ -27,16 +31,16 @@
                 </button>
                 <!--  ocultar  i nomes  visible al pasar el cursor. -->
                 <ul class="menu">
-                   <li> <a href="#">Guia</a></li>
-                   <li> <a href="#">Documentacio</a></li>
-                   <li> <a href="#">Sobre l'aplicacio</a></li> 
+                    <li> <a href="#">Guia</a></li>
+                    <li> <a href="#">Documentacio</a></li>
+                    <li> <a href="#">Sobre l'aplicacio</a></li>
                 </ul>
             </div>
         </nav>
 
         <nav class="filaInterior" aria-label="Idioma i sessió">
             <div class="desplegable">
-                <button class="botonestil" type="button" aria-haspopup="true" aria-label="Idioma">
+                <button class="botonestil" type="button" aria-label="Idioma" aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#4A3B32"
                         stroke-width="21" aria-hidden="true">
                         <circle cx="258" cy="257" r="192" />
@@ -51,38 +55,33 @@
                     </svg>
                 </button>
                 <ul class="menu">
-                   <li> <button type="button" lang="ca">Catala</button> </li>
-                    <li><button type="button" lang="en">Angles</button></li>
-                    <li><button type="button" lang="es">Castella</button></li>
+                    <li> <button type="button" lang="ca">Catala</button> </li>
+                    <li><button type="button" lang="ca">Anglés</button></li>
+                    <li><button type="button" lang="ca">Castella</button></li>
                 </ul>
             </div>
 
             <a class="login" href="./signIn.html">Alta d'usuari</a>
         </nav>
     </header>
-    <main>
+    <main id="contingut" tabindex="-1">
         <div class="juntarPanel_img">
-            <form class="form_Registrar" action="../index.html">
-              <fieldset>
-                <legend>Iniciar sessió</legend>
-                                    <div class="juntarCamps  ">
-                    <label for="email">Email</label>
-                    <input id="email" type="text">
-                </div>
-                <div class="juntarCamps">
-                    <label for="pass">Contrasenya</label>
-                    <input class="campslog" id="pass" type="password">
-
-                </div>
-              </fieldset>
-                
-
-
+            <form class="form_Registrar" action="">
+                <fieldset>
+                    <legend>Iniciar sessió</legend>
+                    <div class="juntarCamps">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" aria-describedby="emailHint" />
+                        <p class="hint" id="emailHint"></p>
+                    </div>
+                    <div class="juntarCamps">
+                        <label for="pass">Contrasenya</label>
+                        <input class="campslog" id="pass" type="password" aria-describedby="passHint" />
+                        <p class="hint" id="passHint"></p>
+                    </div>
+                </fieldset>
 
                 <a href="#"> Heu oblidat la contrasenya?</a>
-
-
-
 
                 <button class="botons" type="submit">Iniciar</button>
 
@@ -91,41 +90,29 @@
                     <p>O AMB</p>
                     <span></span>
                 </div>
-                <button class="botons" type="submit">Google</button>
-                <button class="botons" type="submit">Git hub</button>
+                <div class="botonsSocials">
+                    <button class="botons" type="button">Google</button>
+                    <button class="botons" type="button">Git hub</button>
+                </div>
 
             </form>
-
 
             <figure class="contenidorImatge">
                 <h2 class="titolImatge"> Els teus apunts,<br>
                     en un mateix lloc</h2>
 
                 <picture>
-
-                    <!-- ATRIBUT PER CONTROLAER TAMANY media="(max-width:480px)"-->
                     <source srcset="../public/img/login/login.png">
                     <!-- IMATGE PRINCIPAL  GRAN -->
-                    <img class="imatge" src="../public/img/login/login.webp" alt="WEBP FORMAT ICONE LLAPIS">
+                    <img class="imatge" src="../public/img/login/login.webp" alt="ICONE LLAPIS">
                 </picture>
 
             </figure>
         </div>
-        <!--
-        
-<picture>
-     
-        <source media="(max-width:480px)" srcset="../PRIMER_PART/webp/plujaEstels.webp">
-        <source media="(max-width:768px)" srcset="../PRIMER_PART/transparencyComprimit.png">
-
-        <img src="../PRIMER_PART/concert.jpg" alt="Algo" style="width:100%; height: auto; ">
-    </picture>
--->
 
     </main>
     <footer>
         <p>© 2026 WinDocs · Privacitat · Contacte</p>
-
     </footer>
 </body>
 
