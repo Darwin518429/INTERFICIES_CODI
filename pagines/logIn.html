@@ -11,105 +11,61 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="filaInterior">
-            <h1>WINDOCS</h1>
-            <nav>
+        <header class="header">
+        <h1>WINDOCS</h1>
 
-                <div class="desplegable">
-                    <button class="botonestil">
-                        Ajuda
-                        <svg class="iconeFletxa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#4A3B32" d="
-M1 137.468536
-C4.005838 132.164566 6.498683 126.901604 10.108858 122.569839
-C23.665638 106.303352 49.398029 107.647736 64.205307 122.543419
-C126.914864 185.627335 189.921463 248.415939 252.795700 311.336273
-C254.073944 312.615417 255.063400 314.183167 256.382233 315.864441
-C258.366974 313.992279 259.695465 312.801483 260.955261 311.541901
-C324.093079 248.414062 387.194122 185.249405 450.386688 122.176392
-C461.493256 111.090820 474.900848 107.805603 489.725555 113.057770
-C501.789337 117.331772 509.694519 125.850418 512.626282 138.877930
-C513 144.022095 513 149.044189 513 154.533142
-C510.079498 164.962616 503.404144 172.220932 496.236603 179.370605
-C424.993195 250.436447 353.882202 321.635071 282.709808 392.772125
-C268.669739 406.805206 245.359528 406.815155 231.394424 392.861206
-C157.972244 319.497437 84.554428 246.129135 11.307741 172.590454
-C7.309327 168.576111 4.866098 163.012756 1.349479 158.085220
-C1 151.312363 1 144.624710 1 137.468536Z" />
-                        </svg>
-                    </button>
-                    <!--  ocultar  i nomes  visible al pasar el cursor. -->
-                    <div class="menu">
-                        <a href="#">
-                            Guia
-                        </a>
-                        <a href="#">
-                            Documentacio
-                        </a>
-                        <a href="#">
-                            Sobre l'aplicacio
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-        <div class="filaInterior">
+        <nav aria-label="Navegació principal">
+            <!-- Group seria  com una referencia  per poder accedir el elemnent especifica -->
             <div class="desplegable">
-                <button class="botonestil">
+                <button class="botonestil" type="button" aria-haspopup="true">
+                    Ajuda
+                    <svg class="iconeFletxa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        aria-hidden="true">
+                        <path d="M40 150l216 216 216-216" fill="none" stroke="#4A3B32" stroke-width="80"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <!--  ocultar  i nomes  visible al pasar el cursor. -->
+                <ul class="menu">
+                   <li> <a href="#">Guia</a></li>
+                   <li> <a href="#">Documentacio</a></li>
+                   <li> <a href="#">Sobre l'aplicacio</a></li> 
+                </ul>
+            </div>
+        </nav>
+
+        <nav class="filaInterior" aria-label="Idioma i sessió">
+            <div class="desplegable">
+                <button class="botonestil" type="button" aria-haspopup="true" aria-label="Idioma">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" stroke="#4A3B32"
-                        stroke-width="21">
+                        stroke-width="21" aria-hidden="true">
                         <circle cx="258" cy="257" r="192" />
                         <ellipse cx="258" cy="257" rx="101" ry="192" />
                         <path d="M258 65v384M66 257h384M88 168h340M85 341h346" />
                     </svg>
 
-                    <svg class="iconeFletxa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="#4A3B32" d="
-M1 137.468536
-C4.005838 132.164566 6.498683 126.901604 10.108858 122.569839
-C23.665638 106.303352 49.398029 107.647736 64.205307 122.543419
-C126.914864 185.627335 189.921463 248.415939 252.795700 311.336273
-C254.073944 312.615417 255.063400 314.183167 256.382233 315.864441
-C258.366974 313.992279 259.695465 312.801483 260.955261 311.541901
-C324.093079 248.414062 387.194122 185.249405 450.386688 122.176392
-C461.493256 111.090820 474.900848 107.805603 489.725555 113.057770
-C501.789337 117.331772 509.694519 125.850418 512.626282 138.877930
-C513 144.022095 513 149.044189 513 154.533142
-C510.079498 164.962616 503.404144 172.220932 496.236603 179.370605
-C424.993195 250.436447 353.882202 321.635071 282.709808 392.772125
-C268.669739 406.805206 245.359528 406.815155 231.394424 392.861206
-C157.972244 319.497437 84.554428 246.129135 11.307741 172.590454
-C7.309327 168.576111 4.866098 163.012756 1.349479 158.085220
-C1 151.312363 1 144.624710 1 137.468536Z" />
+                    <svg class="iconeFletxa" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                        aria-hidden="true">
+                        <path d="M40 150l216 216 216-216" fill="none" stroke="#4A3B32" stroke-width="80"
+                            stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <div class="menu">
-                    <button>
-                        Catala
-                    </button>
-                    <button>
-                        Angles
-                    </button>
-                    <button>
-                        Castella
-                    </button>
-
-                </div>
-            </div>
-            <div class="login">
-                <a href="./signIn.html">Registrar</a>
+                <ul class="menu">
+                   <li> <button type="button" lang="ca">Catala</button> </li>
+                    <li><button type="button" lang="en">Angles</button></li>
+                    <li><button type="button" lang="es">Castella</button></li>
+                </ul>
             </div>
 
-        </div>
+            <a class="login" href="./signIn.html">Alta d'usuari</a>
+        </nav>
     </header>
     <main>
         <div class="juntarPanel_img">
             <form class="form_Registrar" action="../index.html">
+              <fieldset>
                 <legend>Iniciar sessió</legend>
-
-                <div class="juntarCamps  ">
+                                    <div class="juntarCamps  ">
                     <label for="email">Email</label>
                     <input id="email" type="text">
                 </div>
@@ -118,6 +74,10 @@ C1 151.312363 1 144.624710 1 137.468536Z" />
                     <input class="campslog" id="pass" type="password">
 
                 </div>
+              </fieldset>
+                
+
+
 
                 <a href="#"> Heu oblidat la contrasenya?</a>
 

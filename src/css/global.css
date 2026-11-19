@@ -4,7 +4,9 @@
 
 /*EXECUTAR AIXO:
 PER TRNASPILAR/COMPILAR EL ARXIU INPUT.CSS
-npx @tailwindcss/cli -i ./src/css/global.css  -o ./public/css/global.css --watch*/
+npx @tailwindcss/cli -i ./src/css/global.css  -o ./public/css/global.css --watch
+*/
+
 
 * {
   @apply font-lex;
@@ -22,6 +24,23 @@ npx @tailwindcss/cli -i ./src/css/global.css  -o ./public/css/global.css --watch
 }
 
 
+ header a:focus-visible,
+ button:focus-visible,
+main:focus-visible {
+
+  @apply outline-[#B0B0B0] outline-4 outline-offset-2;
+  /*outline: 3px solid #4A3B32;
+  outline-offset: 2px;*/
+}
+
+
+  .skip-link {
+    @apply absolute left-0 -top-full;
+  }
+
+  .skip-link:focus {
+    @apply top-0 px-4 py-2 bg-parchment text-deep-mocha z-100;
+  }
 
 
 
@@ -46,8 +65,7 @@ body {
 
 /*Capçalera */
 .header {
-  /*PX: padding izquierda + derecha*/
-  @apply bg-bone w-full h-[75px] flex flex-row items-center justify-between px-8;
+  @apply bg-bone w-full h-[75px] flex flex-row items-center gap-10 px-8;
 }
 .header svg {
   @apply w-10 h-10
@@ -69,8 +87,9 @@ Pixels ÷ 16 =  X rem*/
 }
 
 .header nav {
-  @apply text-lg flex flex-col;
+  @apply text-lg;
 }
+
 
 /*HIJO DIRECTO*/
 .login {
@@ -80,6 +99,9 @@ Pixels ÷ 16 =  X rem*/
 
 
 /*DESPLEGABLE*/
+
+
+
 
 /*BOTON DESPEGABLE ORIENTACION*/
 .botonestil {
@@ -91,7 +113,7 @@ Pixels ÷ 16 =  X rem*/
 }
 
 .desplegable .menu {
-  @apply absolute left-0 top-full hidden bg-deep-mocha rounded-[20px] z-10;
+  @apply absolute left-0 top-full hidden bg-deep-mocha rounded-[20px] z-10; list-style: none;
 }
 
 .desplegable .menu a {
@@ -102,17 +124,19 @@ Pixels ÷ 16 =  X rem*/
   @apply block rounded p-3 text-parchment text-base;
 }
 
-.desplegable:hover .menu {
+.desplegable:hover .menu, .desplegable:focus-within .menu {
   @apply flex flex-col flex-wrap;
 }
 
 
 /*JUNTAR LES OPCIONS */
 .filaInterior {
-  @apply flex flex-row items-center gap-10;
+  @apply flex flex-row items-center gap-10 ml-auto;
 }
 
 /*FOOTER*/
 footer {
-  @apply flex flex-row justify-center items-center bg-bone w-full h-[62px] text-deep-mocha text-lg;
+  @apply flex flex-row justify-center items-center bg-bone w-full h-[62px] text-deep-mocha text-lg; 
 }
+
+

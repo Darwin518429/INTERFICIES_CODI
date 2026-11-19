@@ -1,5 +1,6 @@
 /*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
 @import url("https://fonts.googleapis.com/css2?family=Lexend&display=swap");
+@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -177,6 +178,17 @@
   .visible {
     visibility: visible;
   }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
+  }
   .h-full {
     height: 100%;
   }
@@ -186,6 +198,25 @@
 }
 * {
   font-family: var(--font-lex);
+}
+header a:focus-visible, button:focus-visible, main:focus-visible {
+  outline-style: var(--tw-outline-style);
+  outline-width: 4px;
+  outline-offset: 2px;
+  outline-color: #B0B0B0;
+}
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0px;
+}
+.skip-link:focus {
+  top: 0px;
+  z-index: 100;
+  background-color: var(--color-parchment);
+  padding-inline: calc(var(--spacing) * 4);
+  padding-block: calc(var(--spacing) * 2);
+  color: var(--color-deep-mocha);
 }
 body {
   display: grid;
@@ -203,7 +234,7 @@ body {
   width: 100%;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  gap: calc(var(--spacing) * 10);
   background-color: var(--color-bone);
   padding-inline: calc(var(--spacing) * 8);
 }
@@ -225,8 +256,6 @@ body {
   font-size: 2.25rem;
 }
 .header nav {
-  display: flex;
-  flex-direction: column;
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
 }
@@ -259,6 +288,7 @@ body {
   display: none;
   border-radius: 20px;
   background-color: var(--color-deep-mocha);
+  list-style: none;
 }
 .desplegable .menu a {
   display: block;
@@ -276,12 +306,13 @@ body {
   line-height: var(--tw-leading, var(--text-base--line-height));
   color: var(--color-parchment);
 }
-.desplegable:hover .menu {
+.desplegable:hover .menu, .desplegable:focus-within .menu {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 .filaInterior {
+  margin-left: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -298,4 +329,16 @@ footer {
   font-size: var(--text-lg);
   line-height: var(--tw-leading, var(--text-lg--line-height));
   color: var(--color-deep-mocha);
+}
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-outline-style: solid;
+    }
+  }
 }

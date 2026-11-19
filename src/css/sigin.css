@@ -5,8 +5,15 @@
 /*COMANDA*/
 /*npx @tailwindcss/cli -i ./src/css/sigin.css -o ./public/css/sigin.css --watch*/
 .form_Registrar {
-  /*rounded redondear  las esquinas de un*/
-  @apply bg-deep-mocha w-[539px] h-[600px] rounded-[30px] flex flex-col items-center justify-around gap-0 ;
+  @apply bg-deep-mocha w-[480px] rounded-[24px] flex flex-col items-center gap-2 py-3;
+}
+
+.form_Registrar fieldset {
+  @apply flex flex-col items-center gap-1 ;
+}
+
+.form_Registrar legend {
+  @apply text-[1.5rem] text-center;
 }
 
 .form_Registrar * {
@@ -14,15 +21,15 @@
 }
 
 .form_Registrar legend {
-  @apply text-[2.25rem];
+  @apply text-[1.75rem];
 }
 
 .form_Registrar input {
- @apply bg-parchment text-deep-mocha rounded-[10px] w-[407.1px] h-[30.46px] transition-shadow duration-300 ease-in-out;
+   @apply bg-parchment text-deep-mocha rounded-[8px] w-[380px] h-[28px] px-2 transition-shadow duration-300 ease-in-out px-2;
 }
 
 .form_Registrar input:focus {
- @apply outline-[2px_solid_bone] shadow-[5px_5px_8px_5px_var(--color-bone)];
+ @apply outline-[2px_solid_bone] shadow-[5px_5px_8px_5px_var(--color-bone)] ;
 }
 
 .juntarCamps {
@@ -36,11 +43,11 @@
 /*SEPARADOR*/
 
 .separador {
-  @apply flex justify-center items-center gap-4 w-full;
+  @apply flex justify-center items-center gap-3 w-full;
 }
 
 .separador span {
-  @apply h-px w-[143px] bg-parchment;
+  @apply h-px w-[110px] bg-parchment;
 }
 
 .separador p {
@@ -48,11 +55,21 @@
 }
 
 .botons {
-  @apply bg-parchment text-deep-mocha rounded-[20px] w-[262px] h-[47.02px];
+  @apply bg-parchment text-deep-mocha rounded-[16px] w-[220px] h-[34px] shrink-0;
 }
 
 .contenidorImatge {
   @apply w-[615px] h-[615px] flex flex-col items-center justify-center text-[2.5rem];
+}
+
+
+
+.botonsSocials {
+  @apply flex flex-row gap-3;
+}
+
+.botonsSocials .botons {
+  @apply w-[170px];
 }
 
 /*max-w-full combinada amb h-auto (o
@@ -65,3 +82,11 @@ proporcions dins un contenidor.*/
 figure h2 {
   @apply relative top-30;
 }
+
+
+    .hint {
+      @apply hidden text-parchment;
+    }
+    .hint.visible {
+      @apply block;
+    }
