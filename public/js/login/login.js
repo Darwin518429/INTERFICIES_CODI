@@ -1,12 +1,8 @@
-const  MISSATGE = document.getElementById("avis");
+const MISSATGE = document.getElementById("avis");
 
 document.querySelectorAll('.desplegable').forEach((d) => {
   const boton = d.querySelector('button');
-
-  const set = (abierto) => {
-    boton.setAttribute('aria-expanded', String(abierto));
-    MISSATGE.textContent = "Despegable canviat";
-  };
+  const set = (abierto) => boton.setAttribute('aria-expanded', String(abierto));
 
   d.addEventListener('focusin', () => set(true));
   d.addEventListener('mouseenter', () => set(true));
@@ -15,28 +11,7 @@ document.querySelectorAll('.desplegable').forEach((d) => {
   });
   d.addEventListener('mouseleave', () => set(false));
 });
-/*
-const TANCAT = "Despegable tancat"
-document.querySelectorAll('.desplegable').forEach((d) => {
-  const boton = d.querySelector('button');
-  
-  const set = (abierto) => boton.setAttribute('aria-expanded', String(abierto));
 
-  d.addEventListener('focusin', () =>{ 
-    set(true)
-  });
-  d.addEventListener('focusout', (e) => {
-    if (!d.contains(e.relatedTarget)) {set(false);
-        MISSATGE.innerText = TANCAT
-    }
-  });
-  d.addEventListener('mouseenter', () => set(true));
-  d.addEventListener('mouseleave', () => {set(false)
-     MISSATGE.innerText = TANCAT
-  });
-});
-
-*/
 // ===== ERRORS DEL FORMULARI =====
 const form = document.querySelector('.form_Registrar');
 form.noValidate = true; // el navegador no valida ni bloquea: ho fem nosaltres
